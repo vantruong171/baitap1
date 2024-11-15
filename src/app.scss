@@ -1,20 +1,19 @@
 .todo-list-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo-list-wrapper {
-    border: 2px solid gray;
-    width: 600px;
-    padding: 10px;
-    margin-top: 40px;
-    border-radius: 20px;
+  border: 2px solid gray;
+  width: 600px;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 20px;
 }
 
-.todo-list-header{
-
-    &__title {
-        text-align: center;
-    }
+.todo-list-header {
+  &__title {
+    text-align: center;
+  }
 }
