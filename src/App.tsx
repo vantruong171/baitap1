@@ -1,17 +1,21 @@
-import { useState } from "react";
-import TradeCoinFuncComponent from "./components/TradeCoinFuncComponent";
+import { PlusCircleOutlined } from "@ant-design/icons";
+import "./app.scss";
+import { Button, Form, Input, Space } from "antd";
 
 function App() {
-  const [isTrading, setIsTrading] = useState<boolean>(false);
-
   return (
-    <div className="App">
-      <div>
-        <button onClick={() => setIsTrading(!isTrading)}>
-          {isTrading ? "End" : "Start"} Trade
-        </button>
+    <div className="todo-list-container">
+      <div className="todo-list-wrapper">
+        <div className="todo-list-header">
+          <h2 className="todo-list-header__title">Todo list appliacation</h2>
+          <Form className="todo-list-header__form">
+            <Input size="large" placeholder="Please input task name..." />
+            <Button type="primary">
+              <PlusCircleOutlined />
+            </Button>
+          </Form>
+        </div>
       </div>
-      {isTrading && <TradeCoinFuncComponent />}
     </div>
   );
 }
