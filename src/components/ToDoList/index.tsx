@@ -36,7 +36,7 @@ const dataTasksList = [
 function ToDoList() {
   const [isEditTask, setIsEditTask] = useState(false);
   const [doneTask, setDoneTask] = useState<TTask | null>(null);
-  const [tasks, setTasks] = useState< TTask[]>(
+  const [tasks, setTasks] = useState<TTask[]>(
     JSON.parse(localStorage.getItem("tasks") || "[]")
   );
 
@@ -62,7 +62,7 @@ function ToDoList() {
         //     <Button>ok</Button>
         //     <Button>cancel</Button>
         //   </div>
-        // ) : 
+        // ) :
         return (
           <p
             className={`
@@ -112,7 +112,7 @@ function ToDoList() {
   };
 
   const onClickEditTask = (record: TTask) => {
-    setIsEditTask(true)
+    setIsEditTask(true);
     console.log("onClickEditTask");
   };
 
@@ -134,7 +134,7 @@ function ToDoList() {
         setTasks(_tasks);
       }
       form.resetFields();
-      setIsEditTask(false)
+      setIsEditTask(false);
       setDoneTask(null);
       return;
     }
@@ -145,7 +145,7 @@ function ToDoList() {
     };
     setTasks([...tasks, newTasks]);
     form.resetFields();
-    setIsEditTask(false)
+    setIsEditTask(false);
   };
 
   return (
